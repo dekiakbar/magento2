@@ -94,7 +94,7 @@ class RenderErrorMessages
                 $escapedMessages[] = $this->escaper->escapeHtml($error->getErrorMessage())
                     . ' <a href="#" onclick="$(this).next().show();$(this).hide();return false;">'
                     . __('Show more') . '</a><div style="display:none;">' . __('Additional data') . ': '
-                    . $this->escaper->escapeHtml($error->getErrorDescription()) . '</div>';
+                    . $error->getErrorDescription() . '</div>';
             }
         }
         $message .= implode('<br>', $escapedMessages);
